@@ -5,20 +5,19 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 export default async function handler(req, res) {
   if (req.method === 'POST') {
     try {
-
       const params = {
         submit_type: 'pay',
         mode: 'payment',
         payment_method_types: ['card'],
         billing_address_collection: 'auto',
         shipping_options: [
-          { shipping_rate: 'shr_1LmzYGLGDmVRSEIIi8mxNaah' },
-          { shipping_rate: 'shr_1LmzYlLGDmVRSEII0PqXDi5i' },
-
+          { shipping_rate: 'shr_1Ln0R3LGDmVRSEIIt97I8VPo' },
+          { shipping_rate: 'shr_1Ln0RTLGDmVRSEIIbsWwmnys' },
         ],
         line_items: req.body.map((item) => {
           const img = item.image[0].asset._ref;
           const newImage = img.replace('image-', 'https://cdn.sanity.io/images/ldrss9sl/production/').replace('-webp', '.webp');
+
           return {
             price_data: {
               currency: 'gbp',
@@ -36,11 +35,13 @@ export default async function handler(req, res) {
           }
 
         }),
-        success_url: `${req.headers.origin}/?success=true`,
-        cancel_url: `${req.headers.origin}/?canceled=true`,
+        success_url: `${req.headers.origin}/success`,
+        cancel_url: `${req.headers.origin}/cancelled`,
       }
+
       // Create Checkout Sessions from body params.
       const session = await stripe.checkout.sessions.create(params);
+
       res.status(200).json(session);
     } catch (err) {
       res.status(err.statusCode || 500).json(err.message);
