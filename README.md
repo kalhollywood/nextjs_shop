@@ -4,5 +4,7 @@ This project is a work in progress and the latest version is deployed [here](www
 
 ## Key Learnings
 
-- Sanity can be used to create a backend database and content management system and you can set up the schema as a JS object.
+- As a headless CMS, Sanity can be used to create a backend database and content management system and you can set up the schema as a JS object.
 - You can set up JS files in square brackets [] to have them be dynamically rendered - as with the product slug file in this project. Libraries such as React Router was not required.
+- Learned how to use getServerSideProps, getStaticProps and getStaticPaths
+- Managing React states using React Context

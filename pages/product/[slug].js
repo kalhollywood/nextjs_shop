@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import { client, urlFor } from '../../lib/client';
 import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar } from 'react-icons/ai';
 import { Product } from '../../components';
+import { useStateContext } from '../../context/StateContext';
 
 const ProductDetails = ({ product, products }) => {
 
   const { image, name, details, price } = product;
   const [index, setIndex] = useState(0);
+  const { decQty, incQty, qty } = useStateContext();
 
   return (
     <div>
@@ -20,6 +22,7 @@ const ProductDetails = ({ product, products }) => {
           <div className='small-images-container'>
             {image?.map((item, i) => (
               <img
+                key={i}
                 src={urlFor(item)}
                 className={i === index ? 'small-image selected-image' : 'small-image'}
                 onMouseEnter={() => setIndex(i)}
@@ -45,13 +48,13 @@ const ProductDetails = ({ product, products }) => {
             <p className='quantity-desc'>
               <span
                 className='minus'
-                onClick=""><AiOutlineMinus /></span>
+                onClick={decQty}><AiOutlineMinus /></span>
               <span
                 className='num'
-                onClick="">0</span>
+              >{qty}</span>
               <span
                 className='plus'
-                onClick=""><AiOutlinePlus /></span>
+                onClick={incQty}><AiOutlinePlus /></span>
             </p>
           </div>
           <div className='buttons'>
@@ -60,7 +63,7 @@ const ProductDetails = ({ product, products }) => {
           </div>
         </div>
       </div>
-      <div className='may-like-products-wrapper'>
+      <div className='maylike-products-wrapper'>
         <h2>You may also like</h2>
         <div className="marquee">
           <div className='maylike-products-container track'>
