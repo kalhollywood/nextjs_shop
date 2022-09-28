@@ -15,14 +15,13 @@ const ProductDetails = ({ product, products }) => {
     setShowCart(true);
   }
 
+
   return (
     <div>
       <div className='product-detail-container'>
         <div>
           <div className='image-container'>
-            <img
-              src={urlFor(image && image[index])}
-              className='product-detail-image' />
+            <img src={urlFor(image && image[index])} className='product-detail-image' />
           </div>
           <div className='small-images-container'>
             {image?.map((item, i) => (
@@ -34,9 +33,12 @@ const ProductDetails = ({ product, products }) => {
               />
             ))}
           </div>
-          <div className='product-detail-desc'>
-            <h1>{name}</h1>
-            <div className="reviews">
+        </div>
+
+        <div className='product-detail-desc'>
+          <h1>{name}</h1>
+          <div className="reviews">
+            <div>
               <AiFillStar />
               <AiFillStar />
               <AiFillStar />
@@ -51,15 +53,9 @@ const ProductDetails = ({ product, products }) => {
           <div className='quantity'>
             <h3>Quantity</h3>
             <p className='quantity-desc'>
-              <span
-                className='minus'
-                onClick={decQty}><AiOutlineMinus /></span>
-              <span
-                className='num'
-              >{qty}</span>
-              <span
-                className='plus'
-                onClick={incQty}><AiOutlinePlus /></span>
+              <span className='minus' onClick={decQty}><AiOutlineMinus /></span>
+              <span className='num'>{qty}</span>
+              <span className='plus' onClick={incQty}><AiOutlinePlus /></span>
             </p>
           </div>
           <div className='buttons'>

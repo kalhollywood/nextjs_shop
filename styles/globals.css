@@ -72,7 +72,7 @@ span.text-red {
   font-size: 18px;
 }
 .cart-icon {
-  font-size: 25px;
+  font-size: 50px;
   color: gray;
   cursor: pointer;
   position: relative;
@@ -368,6 +368,7 @@ span.text-red {
 }
 .remove-item {
   font-size: 24px;
+  float: right;
   color: #f02d34;
   cursor: pointer;
   background: transparent;

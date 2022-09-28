@@ -1,6 +1,6 @@
 # E-commerce project
 
-This project is a work in progress and the latest version is deployed [here](www.). It is based on the teachings from [this tutorial](https://www.youtube.com/watch?v=4mOkFXyxfsU&ab_channel=JavaScriptMastery). I chose this project as an opportunity to learn about and use NextJS, Stripe and Sanity.
+This project is a work in progress and the latest version is deployed [here](https://nextjs-shop-kal-kalhollywood.vercel.app/) using Vercel. It is based on the teachings from [this tutorial](https://www.youtube.com/watch?v=4mOkFXyxfsU&ab_channel=JavaScriptMastery). I chose this project as an opportunity to learn about and use NextJS, Stripe, Sanity and Vercel - none of which I had used previously.
 
 ## Key Learnings
 
@@ -9,3 +9,4 @@ This project is a work in progress and the latest version is deployed [here](www
 - Learned how to use getServerSideProps, getStaticProps and getStaticPaths
 - Managing React states using React Context - using useStateContext all over the site to tap into cart items, total price and total quantities.
 - Setting up and utilising Stripe for payments.
+- Deployment with Vercel.
