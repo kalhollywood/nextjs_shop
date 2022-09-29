@@ -613,7 +613,7 @@ span.text-red {
 
 @media screen and (max-width: 800px) {
   .hero-banner-container {
-    height: 500px;
+    height: 520px;
   }
   .hero-banner-image {
     width: 70%;
@@ -672,8 +672,8 @@ span.text-red {
     margin-left: 35px;
   }
   .hero-banner-container button {
-    margin-top: 300px;
-    margin-left: 80px;
+    margin-top: 320px;
+    margin-left: 88px;
     z-index: 10000;
   }
   .desc {
