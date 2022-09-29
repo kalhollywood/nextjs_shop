@@ -613,18 +613,18 @@ span.text-red {
 
 @media screen and (max-width: 800px) {
   .hero-banner-container {
-    height: 450px;
+    height: 500px;
   }
   .hero-banner-image {
-    width: 50%;
-    height: 35%;
-    top: 38%;
-    right: 25%;
+    width: 70%;
+    height: 50%;
+    top: 35%;
+    right: 15%;
   }
   .beats-solo {
     font-size: 10px;
-    margin-top: 42px;
-    margin-left: 70px;
+    margin-top: 52px;
+    margin-left: 80px;
   }
   .footer-banner-container {
     height: 560px;
@@ -663,24 +663,24 @@ span.text-red {
   }
   .hero-banner-container h1 {
     font-size: 60px;
-    padding-left: 20px;
+    padding-left: 30px;
     margin-top: -15px;
   }
   .hero-banner-container h3 {
     font-size: 35px;
-    margin-top: -60%;
-    margin-left: 15px;
+    margin-top: -50%;
+    margin-left: 35px;
   }
   .hero-banner-container button {
-    margin-top: 260px;
-    margin-left: 70px;
+    margin-top: 300px;
+    margin-left: 80px;
     z-index: 10000;
   }
   .desc {
-    bottom: 100px;
+    bottom: 70px;
     font-size: 14px;
     width: 100vw;
-    margin-right: 25px;
+    margin-right: 10px;
   }
   .product-detail-container {
     flex-wrap: wrap;
