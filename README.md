@@ -8,5 +8,5 @@ This project is a work in progress and the latest version is deployed [here](htt
 - You can set up JS files in square brackets [] to have them be dynamically rendered - as with the product slug file in this project. Libraries such as React Router was not required.
 - Learned how to use getServerSideProps, getStaticProps and getStaticPaths
 - Managing React states using React Context - using useStateContext all over the site to tap into cart items, total price and total quantities.
-- Setting up and utilising Stripe for payments.
+- Setting up and utilising Stripe for working payment system.
 - Deployment with Vercel.
